@@ -23,6 +23,6 @@ livelossplot=0.5.4
 
 `TODO/` contains
 
-`TODO/` contains
+`dual_contrast/` contains the experiments related to the proposed Dual Conrast Module.
 
 `HGI/` contains experiments on Hierarchical Graph Infomax.
