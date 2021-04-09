@@ -1,5 +1,8 @@
 __pycache__/
 **/*.ipynb
-**/.ipynb_checkpoints
+**/.ipynb_checkpoints/
+**/checkpoints/
+**/ckpts/
+**/bak/
 **/logs/
 **/data/

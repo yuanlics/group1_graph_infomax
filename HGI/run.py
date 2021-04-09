@@ -32,7 +32,6 @@ from torch_geometric.utils import dropout_adj
 import torch_geometric.transforms as T
 
 from livelossplot import PlotLosses
-from tqdm import tqdm
 
 from sklearn import preprocessing
 from sklearn.ensemble import RandomForestClassifier
@@ -372,6 +371,9 @@ def get_params(nbargs=None):
     parser.add_argument('--logreg-epochs', type=int, default=150, help='maximum number of LogReg epochs')
     parser.add_argument('--patience', type=int, default=100, help='patience for early stopping')
     
+    parser.add_argument('--savef', type=str, default=None, help='save model to file')
+    parser.add_argument('--loadf', type=str, default=None, help='load model from file')
+    
     if nbargs is not None:
         args = parser.parse_args(nbargs)
     else:
@@ -388,6 +390,8 @@ def main(args):
     bs = args.batch_size
     lr = args.lr
     dataset = args.dataset
+    savef = args.savef
+    loadf = args.loadf
     args.takeout = [1, 3]  # Take out node representation layers for infomax.
 
     path = osp.join(osp.abspath(''), 'data', dataset)
@@ -396,15 +400,28 @@ def main(args):
     
     args.num_classes = dataset.num_classes
     args.num_features = max(dataset.num_features, 1)
-
+    
     model = HGI(args).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
-
+    
+    if loadf:
+        model.load_state_dict(torch.load(loadf))
+        kfoldacc = test(model, dataloader, args)
+        print('Kfold accuracy: {:.4f}'.format(kfoldacc))
+        return
+    
     for epoch in range(1, epochs+1):
         loss = train(model, optimizer, dataloader)
         kfoldacc = test(model, dataloader, args)
         log(liveloss, loss, None, kfoldacc, None)
+        
+        best_val_i = max(liveloss.logger.log_history['kfold_acc'], key=lambda i: i.value)
+        step, best_val = best_val_i.step, best_val_i.value
+        if savef and kfoldacc >= best_val:
+            torch.save(model.state_dict(), savef)
+        
     best_val = final_log(liveloss)
+    
     return best_val
 
 

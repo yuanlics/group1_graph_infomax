@@ -12,7 +12,7 @@ tuner:
     optimize_mode: maximize
 trial:
   command: python3 run.py --dataset MUTAG
-  codeDir: .
+  codeDir: ..
   gpuNum: 1
 localConfig:
   gpuIndices: 0,1,2,3

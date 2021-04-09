@@ -12,9 +12,9 @@ tuner:
     optimize_mode: maximize
 trial:
   command: python3 run.py --dataset Mutagenicity
-  codeDir: .
+  codeDir: ..
   gpuNum: 1
 localConfig:
   gpuIndices: 2,3,4,5,6,7
-  maxTrialNumPerGpu: 3
   useActiveGpu: true
+  maxTrialNumPerGpu: 3
