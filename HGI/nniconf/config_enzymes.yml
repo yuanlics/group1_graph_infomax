@@ -1,0 +1,19 @@
+authorName: liyuan
+experimentName: hier_dgi_enzymes
+trialConcurrency: 4
+maxExecDuration: 4h
+maxTrialNum: 200
+trainingServicePlatform: local
+searchSpacePath: search_space.json
+useAnnotation: false
+tuner:
+  builtinTunerName: TPE
+  classArgs:
+    optimize_mode: maximize
+trial:
+  command: python3 run.py --dataset ENZYMES --epochs 30
+  codeDir: .
+  gpuNum: 1
+localConfig:
+  gpuIndices: 2,3,4,5
+  useActiveGpu: false
