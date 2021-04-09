@@ -2,7 +2,7 @@
 With the purpose of understanding how the different layers in graph infomax affect performance,choices of encoder function and summary function are examined.
 A DGI structure coding involves the encoder, sumary and corruption layers. Encoder and summary layers are modified.
 
-#Environment
+# Environment
 
 `pyton =3.8.8`
 
@@ -27,6 +27,8 @@ The summary layer is function of sigmoid(pooled features), where the pooled feat
 3. min pooling
 
 4. concatentation of [mean, max, min] pooling, with a linear MLP to a 512 hidden size.
+
+# To Run
 
 #To run the encoder layer
 
