@@ -21,8 +21,8 @@ livelossplot=0.5.4
 
 ## Directory contents
 
-`TODO/` contains
+`explore_graph_infomax/` contains the exploratory experiments on graph infomax.
 
 `dual_contrast/` contains the experiments related to the proposed Dual Conrast Module.
 
-`HGI/` contains experiments on Hierarchical Graph Infomax.
+`HGI/` contains the experiments on our proposed Hierarchical Graph Infomax.
