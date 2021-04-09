@@ -2,7 +2,7 @@
 
 Author: Li Yuan A0198759Y
 
-Partially referenced from: [https://github.com/fanyun-sun/InfoGraph](https://github.com/fanyun-sun/InfoGraph) and [https://github.com/cszhangzhen/HGP-SL](https://github.com/cszhangzhen/HGP-SL)
+Partially referenced from [https://github.com/fanyun-sun/InfoGraph](https://github.com/fanyun-sun/InfoGraph) and [https://github.com/cszhangzhen/HGP-SL](https://github.com/cszhangzhen/HGP-SL)
 
 ## Search hyperparameter (optional)
 
@@ -16,7 +16,7 @@ This step is optional. We provide searched hyperparameters in `parallel_run.sh`
 
 `bash parallel_run.sh <dataset> savef <cuda device IDs>`
 
-For example, `bash parallel_run.sh MUTAG savef 0 1 2 3 4`
+For example, `bash parallel_run.sh PROTEINS savef 0 1 2 3 4`
 
 This command runs 5 experiments simultaneously. The datasets are automatically downloaded by pytorch-geometric during training. The checkpoints and training logs are saved in `ckpts/` and `logs/`, respectively.
 
@@ -24,7 +24,7 @@ This command runs 5 experiments simultaneously. The datasets are automatically d
 
 `bash parallel_run.sh <dataset> loadf <cuda device IDs>`
 
-For example, `bash parallel_run.sh MUTAG loadf 0 1 2 3 4`
+For example, `bash parallel_run.sh PROTEINS loadf 0 1 2 3 4`
 
 This command evaluates 5 checkpoints simultaneously. The evaluation logs are saved in `logs/`.
 
