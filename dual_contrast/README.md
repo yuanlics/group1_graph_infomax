@@ -1,12 +1,12 @@
 # Dual Contrastive Learning with GraphCL
 
-## 1. Requirements
+## 1 Requirements
 
 `` python>=3.6.2``
 
 `` pytorch==1.4.0``
 
-## 2. Download
+## 2 Download
 
 #### 2.1 data:
 https://drive.google.com/file/d/1bbt7PxYQTRwIkEwcpaH9dyJUwcXFZZVr/view?usp=sharing
