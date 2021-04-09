@@ -30,7 +30,7 @@ The summary layer is function of sigmoid(pooled features), where the pooled feat
 
 # To Run
 
-#To run the encoder layer
+To run the encoder layer
 
 E.g: to run the dgi_appnp.py
 
@@ -38,7 +38,7 @@ E.g: to run the dgi_appnp.py
 
 *Parameter tuning will run in the main. If already know optimized parameters, need to comment the corresponding parts of the code in __main__. Different dataset also required manually modification to change "dataset" to "Cora", "Citeseer" or "Pubmed".
 
-#To run the summary layer
+To run the summary layer
 
 `python dgi_readout`
 
