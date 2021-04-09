@@ -4,7 +4,7 @@ A DGI structure coding involves the encoder, sumary and corruption layers. Encod
 
 # Environment
 
-`pyton =3.8.8`
+`python=3.8.8`
 
 `pytorch=1.70 with cuda10.1`
 
@@ -26,7 +26,7 @@ The summary layer is function of sigmoid(pooled features), where the pooled feat
 
 3. min pooling
 
-4. concatentation of [mean, max, min] pooling, with a linear MLP to a 512 hidden size.
+4. concatentation of \[mean, max, min\] pooling, with a linear MLP to a 512 hidden size.
 
 # To Run
 
@@ -40,6 +40,6 @@ E.g: to run the dgi_appnp.py
 
 To run the summary layer
 
-`python dgi_readout`
+`python dgi_readout.py`
 
 *need to manually modify the callable "summary" function in "DeepGraphInfomax" to change the pooling methods. Also need to change the "dataset" for different datasets

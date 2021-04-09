@@ -1,7 +1,5 @@
 # Hierarchical Graph Infomax
 
-Author: Li Yuan A0198759Y
-
 Partially referenced from [https://github.com/fanyun-sun/InfoGraph](https://github.com/fanyun-sun/InfoGraph) and [https://github.com/cszhangzhen/HGP-SL](https://github.com/cszhangzhen/HGP-SL)
 
 ## Search hyperparameter (optional)
