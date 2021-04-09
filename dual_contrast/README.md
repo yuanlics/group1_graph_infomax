@@ -8,7 +8,7 @@
 
 ## 2. Download
 
-#### 2.1 Data:
+#### 2.1 data:
 https://drive.google.com/file/d/1bbt7PxYQTRwIkEwcpaH9dyJUwcXFZZVr/view?usp=sharing
 
 
@@ -24,10 +24,10 @@ Download them and extract them into this directory:
 To run the code:
 ``./scripts/run.sh``
 You may modify the ``dataset``, ``augments``, ``ps`` and ``weights`` in the script accordingly, where 
-``datset`` is one of ``cora`` or ``citeseer`,
+``datset`` is one of ``cora`` or ``citeseer``,
 ``augments`` is one of ``node``, ``edge``, ``mask`` and ``subgraph``.
 ``ps`` is the modification rate of the augmentation, 
-``weights`` are the $\lambda$ mentioned in the section 5 of the report.
+``weights`` are values of $ \lambda $ mentioned in the section 5 of the report.
 
 ## Acknowledgement
 This code is built upon the implementation of https://github.com/Shen-Lab/GraphCL
